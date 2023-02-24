@@ -58,7 +58,8 @@ fun BirthdayGreetingWithText(message: String, from: String){
             text = message, fontSize =25.sp,  modifier = Modifier.background(color = Color.Green)
         )
         Text(
-            text = from, fontSize = 15.sp
+            text = from, fontSize = 15.sp,
+            modifier = Modifier.padding(start = 20.dp, top=20.dp, bottom=20.dp, end=20.dp).align(alignment = Alignment.End)
         )
 
     }

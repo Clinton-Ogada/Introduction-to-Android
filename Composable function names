@@ -1,0 +1,40 @@
+The compose function that returns nothing and bears the @Composable annotation MUST be named using pascal case. Pascal case refers to a naming convention in which the first letter of each word in a compound word is capitalized. The difference between pascal case and camel case is that all words in pascal case are capitalized. In camel case, the first word is not capitalized.
+
+
+
+The Compose function: 
+MUST be a noun: DoneButton()
+NOT a verb or verb phrase: DrawTextField()
+NOT a nouned preposition: TextFieldWithLink()
+NOT an adjective: Bright()
+NOT an adverb: Outside()
+Nouns MAY be prefixed by descriptive adjectives: RoundIcon()
+
+
+Example code. Do not copy over
+
+
+// Do: This function is a descriptive PascalCased noun as a visual UI element
+@Composable
+fun FancyButton(text: String) {
+
+
+// Do: This function is a descriptive PascalCased noun as a non-visual element
+// with presence in the composition
+@Composable
+fun BackButtonHandler() {
+
+
+// Don't: This function is a noun but is not PascalCased!
+@Composable
+fun fancyButton(text: String) {
+
+
+// Don't: This function is PascalCased but is not a noun!
+@Composable
+fun RenderFancyButton(text: String) {
+
+
+// Don't: This function is neither PascalCased nor a noun!
+@Composable
+fun drawProfileImage(image: ImageAsset) {

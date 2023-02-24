@@ -51,7 +51,8 @@ val image = painterResource(id = R.drawable.birthdayparty)
 fun BirthdayGreetingWithText(message: String, from: String){
     Column {
         Text(
-            text = message, fontSize =25.sp
+            //Adding background color to text with Layouts modifiers
+            text = message, fontSize =25.sp,  modifier = Modifier.background(color = Color.Green)
         )
         Text(
             text = from, fontSize = 15.sp

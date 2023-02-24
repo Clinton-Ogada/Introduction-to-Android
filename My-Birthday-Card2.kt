@@ -28,6 +28,9 @@ class MainActivity : ComponentActivity() {
                     modifier = Modifier.fillMaxSize(),
                     color = MaterialTheme.colors.background
                 ) {
+                    //You can extract strings into a resource file with stringResource Function by using Extract string resource. Use the code below
+                   // BirthdayGreetingWithImage(Message = stringResource(R.string.happy_birthday_text), from =stringResource(
+                                            //R.string.klint_text))
                     BirthdayGreetingWithImage(message ="Happiest Birthday Vivian", from ="From:Klint")
                 }
             }

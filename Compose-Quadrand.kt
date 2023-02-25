@@ -46,13 +46,13 @@ fun MyQuadrantApp() {
                 title = "Text composable",
                 description = "Displays text and follows Material Design guidelines",
                // backgroundColor = Color.Green,
-                modifier = Modifier.weight(1f).background(backgroundColor)
+                modifier = Modifier.weight(1f).background(Color.Green)
             )
             ComposableDisplay(
                 title = "Image composables",
                 description = "Create a composable that lays out and draws a given Painter class object",
                 //backgroundColor = Color.Yellow,
-                modifier = Modifier.weight(1f).background(backgroundColor)
+                modifier = Modifier.weight(1f).background(Color.Yellow)
             )
 
         }
@@ -61,7 +61,7 @@ fun MyQuadrantApp() {
                 title = "Row composable",
                 description = "A layout composable that places its children in a horizontal sequence",
                 //backgroundColor = Color.Cyan,
-                modifier = Modifier.weight(1f).background(backgroundColor)
+                modifier = Modifier.weight(1f).background(Color.Cyan)
             )
             ComposableDisplay(
                 title = "Column composable",

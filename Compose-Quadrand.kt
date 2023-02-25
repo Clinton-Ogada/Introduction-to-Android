@@ -6,12 +6,15 @@ import androidx.activity.compose.setContent
 import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.*
 import androidx.compose.material.MaterialTheme
+import androidx.compose.material.SnackbarDefaults
+import androidx.compose.material.SnackbarDefaults.backgroundColor
 import androidx.compose.material.Surface
 import androidx.compose.material.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.graphics.Color.Companion.LightGray
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.tooling.preview.Preview
@@ -42,14 +45,14 @@ fun MyQuadrantApp() {
             ComposableDisplay(
                 title = "Text composable",
                 description = "Displays text and follows Material Design guidelines",
-                backgroundColor = (color = Color.Green),
-                modifier = Modifier.weight(1f)
+               // backgroundColor = Color.Green,
+                modifier = Modifier.weight(1f).background(backgroundColor)
             )
             ComposableDisplay(
                 title = "Image composables",
                 description = "Create a composable that lays out and draws a given Painter class object",
-                backgroundColor = Color.Yellow,
-                modifier = Modifier.weight(1f)
+                //backgroundColor = Color.Yellow,
+                modifier = Modifier.weight(1f).background(backgroundColor)
             )
 
         }
@@ -57,14 +60,14 @@ fun MyQuadrantApp() {
             ComposableDisplay(
                 title = "Row composable",
                 description = "A layout composable that places its children in a horizontal sequence",
-                backgroundColor = Color.Cyan,
-                modifier = Modifier.weight(1f)
+                //backgroundColor = Color.Cyan,
+                modifier = Modifier.weight(1f).background(backgroundColor)
             )
             ComposableDisplay(
                 title = "Column composable",
                 description = "A layout composable that places its children in a vertical sequence",
-                backgroundColor = Color.LightGray,
-                modifier = Modifier.weight(1f)
+                //backgroundColor = Color.LightGray,
+                modifier = Modifier.weight(1f).background(Color.LightGray)
             )
         }
 
@@ -74,8 +77,8 @@ fun MyQuadrantApp() {
 private fun ComposableDisplay(
     title: String,
     description: String,
-    backgroundColor: Color.Companion = Color,
-    modifier = Modifier = Modifier
+    backgroundColor: Color = Color.Transparent,
+    modifier: Modifier
 ){
     Column(
         modifier = modifier
@@ -103,3 +106,4 @@ fun MyQuadrantAppPreview(){
         MyQuadrantApp()
     }
 }
+
